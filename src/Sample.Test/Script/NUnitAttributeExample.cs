@@ -60,7 +60,30 @@
         /// </summary>
         [Test]
         [FrameworkTestId("WorkItem3")]
-        public void TestMethod3()
+        public void TestMethod3_TestAttribute()
+        {
+            this.Prepare();
+
+            // Arrange
+            Foo foo = new Foo();
+
+            // Act
+            bool result = foo.Bar();
+
+            // Assert
+            Assert.That(result, Is.False);
+
+            this.Complete();
+        }
+
+        /// <summary>
+        /// A sample method that represents a typical test.  This method adds usage
+        /// of the <see cref="FrameworkTestId"/> attribute, a custom subclass of
+        /// <see cref="PropertyAttribute"/>.
+        /// </summary>
+        [TestCase]
+        [FrameworkTestId("WorkItem3")]
+        public void TestMethod3_TestCaseAttribute()
         {
             this.Prepare();
 
