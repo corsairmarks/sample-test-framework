@@ -6,7 +6,7 @@
     /// <summary>
     /// Sample NUnit test scripts of <see cref="Foo"/> using proposed framework elements.
     /// </summary>
-        [TestOf(typeof(Foo))]
+    [TestOf(typeof(Foo))]
     public class NUnitSetUpTearDownExample : BaseFrameworkTestFixtureWithSetUpTearDown
     {
         /// <summary>
@@ -16,7 +16,7 @@
         /// that <see cref="BaseFrameworkTestFixture.Complete()"/> is called after every test, the
         /// boilerplate code is no longer necessary.
         /// </summary>
-        [TestCase(TestName = "ReportingName4")]
+        [Test]
         [FrameworkTestId("WorkItem4")]
         public void TestMethod4()
         {

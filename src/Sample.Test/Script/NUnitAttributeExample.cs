@@ -13,8 +13,8 @@
         /// A sample method that represents a typical test.  This method adds
         /// usage of a <see cref="PropertyAttribute"/>.
         /// </summary>
-        [TestCase(TestName = "ReportingName1")]
-        [Property("TestId", "WorkItem1")]
+        [Test]
+        [Property("TestIdPropertyKey", "WorkItem1")]
         public void TestMethod1()
         {
             this.Prepare();
@@ -35,7 +35,7 @@
         /// A sample method that represents a typical test.  This method adds
         /// usage of a constant for the <see cref="PropertyAttribute"/> key.
         /// </summary>
-        [TestCase(TestName = "ReportingName2")]
+        [Test]
         [Property(FrameworkTestIdAttribute.TestIdPropertyKey, "WorkItem2")]
         public void TestMethod2()
         {
@@ -58,7 +58,7 @@
         /// of the <see cref="FrameworkTestId"/> attribute, a custom subclass of
         /// <see cref="PropertyAttribute"/>.
         /// </summary>
-        [TestCase(TestName = "ReportingName3")]
+        [Test]
         [FrameworkTestId("WorkItem3")]
         public void TestMethod3()
         {
